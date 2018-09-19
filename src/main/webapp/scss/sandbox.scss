@@ -1,1 +1,5 @@
-/** Add sass/scss rules here for your application. */
+@import './variables.scss';
+
+span {
+  color: $primary-color;
+}

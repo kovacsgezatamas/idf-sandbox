@@ -49,7 +49,6 @@
 		<inject.gin.version>2.1.2</inject.gin.version>
 		<inject.guice.version>3.0</inject.guice.version>
 		<libsass.version>0.2.10-libsass_3.5.3</libsass.version>
-		<lesscss.version>1.7.0.1.1</lesscss.version>
 	</properties>
 
 	<dependencyManagement>
@@ -237,25 +236,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>${maven.jar.version}</version>
-			</plugin>
-
-			<!-- Build less files: less to css -->
-			<plugin>
-				<groupId>org.lesscss</groupId>
-				<artifactId>lesscss-maven-plugin</artifactId>
-				<version>${lesscss.version}</version>
-				<configuration>
-					<sourceDirectory>${project.basedir}/src/main/webapp/less</sourceDirectory>
-					<outputDirectory>${project.basedir}/src/main/webapp/less</outputDirectory>
-					<compress>true</compress>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 
 			<!-- Build SASS files: scss to css -->

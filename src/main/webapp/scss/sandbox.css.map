@@ -3,8 +3,9 @@
 	"file": "sandbox.css",
 	"sources": [
 		"sandbox.scss",
-		"sandbox.scss/JSASS_CUSTOM.scss"
+		"sandbox.scss/JSASS_CUSTOM.scss",
+		"variables.scss"
 	],
 	"names": [],
-	"mappings": ""
+	"mappings": "AAEA,AAAA,IAAI,AAAC,CACH,KAAK,CEFS,IAAI,CFGnB"
 }
