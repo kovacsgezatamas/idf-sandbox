@@ -14,25 +14,86 @@ $ns: 'idf-person-view';
 .#{$ns}-items {
   flex: 1;
   overflow-y: scroll;
+  background: rgb(238, 238, 238);
 }
 
 .#{$ns}-footer {
-  border-top: 1px solid #CCC;
+  box-shadow: 4px 1px 2px 1px #DDD;
+  border-top: 1px solid #e5e5e5;
   padding: 8px;
+  z-index: 2;
+  position: relative;
 }
 
 .#{$ns}-grid {
-  .#{$ns}-cell {
+  > div {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding: 8px
+  }
 
+  .cellListEvenItem,
+  .cellListOddItem {
+    width: calc(100% - 9px);
+    margin: 8px;
+    overflow: hidden;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    background: #FFF;
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      width: calc(50% - 18px);
+    }
+
+    @media (min-width: 900px) {
+      width: calc(33.33% - 18px);
+    }
+  }
+
+  .#{$ns}-cell {
+    header {
+      border-bottom: 1px solid #EFEFEF;
+      font-weight: 600;
+
+      figure {
+        margin: 8px;
+      }
+    }
+
+    section {
+      padding: 8px;
+      border-bottom: 1px solid #EFEFEF;
+
+      .#{$ns}-data {
+        margin-bottom: 8px;
+      }
+    }
+
+    footer {
+      padding: 8px;
+
+      button {
+        margin-right: 8px;
+      }
+    }
   }
 }
 
 .#{$ns}-list {
   .#{$ns}-cell {
-    border-bottom: 1px solid #AAA;
+    border-bottom: 1px solid #EEE;
+    background: #FFF;
+    overflow: hidden;
+    margin-bottom: 8px;
+
+    &:first-child {
+      margin-top: 8px;
+    }
 
     header {
-      border-bottom: 1px solid #EEE;
+      border-bottom: 1px solid #EFEFEF;
+      font-weight: 600;
 
       figure {
         display: flex;
@@ -48,6 +109,7 @@ $ns: 'idf-person-view';
     section {
       padding: 16px;
       display: flex;
+      border-bottom: 1px solid #EFEFEF;
 
       .#{$ns}-data {
         flex: 1;
@@ -56,10 +118,10 @@ $ns: 'idf-person-view';
     }
 
     footer {
-      padding: 0 16px 8px;
+      padding: 8px 16px 8px;
 
       button {
-        margin-right: 16px;
+        margin-right: 8px;
       }
     }
   }

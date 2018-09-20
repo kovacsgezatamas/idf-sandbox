@@ -1,9 +1,15 @@
 $ns: 'idf-filter-toolbar';
 
 .#{$ns}-container {
-  max-height: 164px;
+  max-height: 138px;
+  border-bottom: 1px solid #ECECEC;
+  display: flex;
+}
+
+.#{$ns}-scrollable {
+  flex: 1;
+  overflow: hidden;
   overflow-y: scroll;
-  border-bottom: 1px solid red;
 }
 
 .#{$ns}-content {
@@ -16,7 +22,6 @@ $ns: 'idf-filter-toolbar';
 
   label {
     display: block;
-    margin-bottom: 4px;
   }
 
   input,
@@ -26,6 +31,9 @@ $ns: 'idf-filter-toolbar';
 }
 
 .#{$ns}-apply-container {
-  padding: 8px;
-  border-bottom: 1px solid red;
+  padding: 16px;
+  border-left: 1px solid #EEE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

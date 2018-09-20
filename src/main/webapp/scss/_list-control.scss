@@ -2,9 +2,12 @@ $ns: 'idf-list-control';
 
 .#{$ns} {
   padding: 8px;
-  border-bottom: 1px solid red;
+  box-shadow: 0 1px 1px 0 #EEE;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  z-index: 2;
 }
 
 .#{$ns}-button {
-  margin-right: 16px;
+  margin-right: 8px;
 }
