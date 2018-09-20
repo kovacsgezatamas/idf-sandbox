@@ -104,13 +104,13 @@ public class PersonCell extends AbstractCell<PersonJSO> {
 
 	/**
 	 * Cell XHTML Template.
-	 * 
+	 *
 	 * @designer: feel free to modify it in order to meet your expectations
 	 *
 	 */
 	public interface Template extends SafeHtmlTemplates {
 		//@formatter:off
-		@Template("<div class='person-cell'>"
+		@Template("<div class='idf-person-view-cell'>"
 				 	+ "<header>"
 				 		+ "<figure>"
 				 			+ "<img class='avatar' src=\"{12}\"></img>"
@@ -123,22 +123,22 @@ public class PersonCell extends AbstractCell<PersonJSO> {
 				 		+ "</figure>"
 					+ "</header>"
 					+ "<section>"
-						+ "<div class='personal-info'>"
+						+ "<div class='idf-person-view-data personal-info'>"
 							+ "<i class='{4}' title='{4}'></i>"
 							+ "<div class='race' title='Race'>{5}</div>"
 							+ "<div class='language' title='Language'>{6}</div>"
 						+ "</div>"
-						+ "<div class='education'>"
+						+ "<div class='idf-person-view-data education'>"
 							+ "<div class='university' title='University'>{7}</div>"
 						+ "</div>"
-						+ "<div class='work'>"
+						+ "<div class='idf-person-view-data work'>"
 							+ "<div class='job-title' title='Job Title'>{10}</div>"
 							+ "<div class='company' title='Company'>{13}</div>"
 							+ "<div class='department' title='Department'>{14}</div>"
 							+ "<div class='ein' title='Employer Identification Number'>{15}</div>"
 							+ "<div class='email' title='E-Mail'>{9}</div>"
 						+ "</div>"
-						+ "<aside>"
+						+ "<aside class='idf-person-view-data'>"
 							+ "<div class='linkedin-skill' title='LinkedIn Skill'>{11}</div>"
 							+ "<div class='buzzword' title='Buzzword'>{8}</div>"
 						+ "</aside>"

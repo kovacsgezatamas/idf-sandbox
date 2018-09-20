@@ -1,0 +1,31 @@
+$ns: 'idf-filter-toolbar';
+
+.#{$ns}-container {
+  max-height: 164px;
+  overflow-y: scroll;
+  border-bottom: 1px solid red;
+}
+
+.#{$ns}-content {
+  padding: 8px 8px 0;
+}
+
+.#{$ns}-item {
+  display: inline-block;
+  margin: 0 12px 8px 0;
+
+  label {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  input,
+  select {
+    display: block;
+  }
+}
+
+.#{$ns}-apply-container {
+  padding: 8px;
+  border-bottom: 1px solid red;
+}

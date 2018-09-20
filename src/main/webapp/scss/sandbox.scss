@@ -1,4 +1,9 @@
-@import './variables.scss';
+@import 'variables';
+@import 'normalize';
+
+@import 'person-view';
+@import 'filter-toolbar';
+@import 'list-control';
 
 span {
   color: $primary-color;

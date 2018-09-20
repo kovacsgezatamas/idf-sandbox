@@ -1,4 +1,6 @@
 .idea/
+.vscode/
 
 target/
-src/main/webapp/dist/
+src/main/webapp/scss/sandbox.css
+src/main/webapp/scss/sandbox.css.map

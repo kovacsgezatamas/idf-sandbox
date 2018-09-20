@@ -1,0 +1,10 @@
+$ns: 'idf-list-control';
+
+.#{$ns} {
+  padding: 8px;
+  border-bottom: 1px solid red;
+}
+
+.#{$ns}-button {
+  margin-right: 16px;
+}

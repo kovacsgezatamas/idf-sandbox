@@ -253,8 +253,8 @@
 						<configuration>
 							<outputStyle>compressed</outputStyle>
 							<inputPath>${project.basedir}/src/main/webapp/scss</inputPath>
-							<outputPath>${project.basedir}/src/main/webapp/dist</outputPath>
-							<sourceMapOutputPath>${project.basedir}/src/main/webapp/dist</sourceMapOutputPath>
+							<outputPath>${project.basedir}/src/main/webapp/scss</outputPath>
+							<sourceMapOutputPath>${project.basedir}/src/main/webapp/scss</sourceMapOutputPath>
 						</configuration>
 					</execution>
 				</executions>
