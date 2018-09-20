@@ -6,13 +6,13 @@ $ns: 'idf-person-view';
 }
 
 .#{$ns}-content {
-  flex: 1;
+  flex: 1 1 100px;
   display: flex;
   flex-direction: column;
 }
 
 .#{$ns}-items {
-  flex: 1;
+  flex: 1 1 100px;
   overflow-y: scroll;
   background: rgb(238, 238, 238);
 }
@@ -112,7 +112,7 @@ $ns: 'idf-person-view';
       border-bottom: 1px solid #EFEFEF;
 
       .#{$ns}-data {
-        flex: 1;
+        flex: 1 1 100px;
         margin-right: 8px;
       }
     }
