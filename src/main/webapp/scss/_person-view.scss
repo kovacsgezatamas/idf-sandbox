@@ -188,6 +188,17 @@ $ns: 'idf-person-view';
       }
     }
 
+    @media (max-width: 700px) {
+      section {
+        flex-wrap: wrap;
+
+        .#{$ns}-data {
+          min-width: calc(50% - 20px);
+          margin-bottom: 12px;
+        }
+      }
+    }
+
     footer {
       padding: 8px 16px 8px;
 
