@@ -17,6 +17,50 @@ $ns: 'idf-person-view';
   background: rgb(238, 238, 238);
 }
 
+.#{$ns}-data > div {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.#{$ns}-data-group-name {
+  font-weight: 600;
+
+  &:after {
+    display: inline-block;
+    content: ":";
+  }
+}
+
+.#{$ns}-data-title {
+  overflow: hidden;
+  width: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: width 400ms;
+  transition-delay: 400ms;
+  margin-right: 8px;
+  font-style: italic;
+  display: inline-block;
+  margin-bottom: -6px;
+}
+
+.#{$ns}-data:hover .#{$ns}-data-title {
+  width: 64px;
+}
+
+.#{$ns}-data-gender-icon {
+  &.Male:after {
+    display: inline-block;
+    content: "Male"
+  }
+  &.Feale:after {
+    display: inline-block;
+    content: "Female"
+  }
+}
+
 .#{$ns}-footer {
   box-shadow: 4px 1px 2px 1px #DDD;
   border-top: 1px solid #e5e5e5;
@@ -25,12 +69,35 @@ $ns: 'idf-person-view';
   position: relative;
 }
 
+@keyframes grid-show-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes list-show-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .#{$ns}-grid {
   > div {
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
-    padding: 8px
+    padding: 8px;
+    animation: grid-show-animation 200ms ease-in 0s 1 normal none running;
   }
 
   .cellListEvenItem,
@@ -81,6 +148,10 @@ $ns: 'idf-person-view';
 }
 
 .#{$ns}-list {
+  > div {
+    animation: list-show-animation 200ms ease-in 0s 1 normal none running;
+  }
+
   .#{$ns}-cell {
     border-bottom: 1px solid #EEE;
     background: #FFF;

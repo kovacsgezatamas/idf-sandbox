@@ -1,9 +1,10 @@
 $ns: 'idf-filter-toolbar';
 
 .#{$ns}-container {
-  max-height: 138px;
+  height: 138px;
   border-bottom: 1px solid #ECECEC;
   display: flex;
+  transition: height 400ms;
 }
 
 .#{$ns}-scrollable {
@@ -30,10 +31,42 @@ $ns: 'idf-filter-toolbar';
   }
 }
 
+@media (max-width: 400px) {
+  .#{$ns}-item {
+    width: 100%;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+  .#{$ns}-item {
+    width: calc(50% - 14px);
+  }
+}
+
+@media (min-width: 700px) {
+  .#{$ns}-item {
+    width: 260px;
+  }
+}
+
 .#{$ns}-apply-container {
   padding: 16px;
   border-left: 1px solid #EEE;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (max-width : 600px) {
+  .#{$ns}-container {
+    height: 185px;
+    flex-direction: column;
+  }
+
+  .#{$ns}-apply-container {
+    display: block;
+    padding: 8px;
+    border-left: 0 none;
+    border-top: 1px solid #EEE;
+  }
 }
